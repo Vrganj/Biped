@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-// ===== definiranje pinova =====
+// definiranje pinova
 #define kukDPin 9
 #define koljenoDPin 8
 #define glezanjDPin 7
