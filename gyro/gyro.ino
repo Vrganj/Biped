@@ -7,15 +7,12 @@ Servo servo;
 
 void setup() {
   servo.attach(4);
-  Serial.begin(9600);
+
   Wire.begin();
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(0x6B);
   Wire.write(0);
-  Wire.endTransmission(true);
-
-  pinMode(5, OUTPUT);
-  digitalWrite(5, HIGH);
+  Wire.endTransmission(true)
 }
 
 int getGyroY() {
@@ -31,7 +28,6 @@ int getGyroY() {
 
 void loop() {
   servo.write(getGyroY() * -3 + 90);
-
-  Serial.println();
+  
   delay(100);
 }
